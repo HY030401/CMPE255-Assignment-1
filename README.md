@@ -379,9 +379,9 @@ Part 2 will replicate and explore the data science experiments provided in the c
 
 # Medium Article
 
-A Medium article documenting the end-to-end Part 1 data science workflow will be added here.
+I published a detailed article describing the complete end-to-end workflow, including data cleaning, exploratory data analysis, machine learning model comparison, model interpretation, threshold analysis, and business insights.
 
-**Link:** To be added
+[Read the full Medium article: Predicting Customer Churn with AI-Assisted Data Science](https://medium.com/@yhz1805/predicting-customer-churn-with-ai-assisted-data-science-an-end-to-end-machine-learning-project-38d42dc91b9d)
 
 ---
 
