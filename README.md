@@ -397,7 +397,7 @@ A video walkthrough explaining the end-to-end workflow, outputs, interpretations
 
 The AI-assisted development transcript used during Part 1 will be included in the repository.
 
-**Status:** To be added
+**Status:** Added to the Part 1 folder.
 
 ---
 
@@ -409,7 +409,7 @@ The AI-assisted development transcript used during Part 1 will be included in th
 - [x] Machine learning model comparison
 - [x] Model interpretation
 - [x] Classification threshold experiment
-- [ ] Medium article
-- [ ] Chat transcript
+- [x] Medium article
+- [x] Chat transcript
 - [ ] YouTube walkthrough
 - [ ] Part 2 experiments
