@@ -380,13 +380,13 @@ Part 2 replicates and adapts selected data science experiments from the instruct
 
 Rather than reproducing every project exactly, I implemented five representative experiments covering different areas of data science.
 
-| Experiment | Main Technique | Key Result |
-|---|---|---|
-| NYC Taxi Trip Prediction | Regression | Random Forest achieved R² ≈ 0.735 and MAE ≈ 219 seconds |
-| Customer Segmentation | K-Means Clustering | Four clusters selected with Silhouette Score ≈ 0.577 |
+| Experiment                 | Main Technique              | Key Result |
+|---                         |---                          |--- |
+| NYC Taxi Trip Prediction   | Regression                  | Random Forest achieved R² ≈ 0.735 and MAE ≈ 219 seconds |
+| Customer Segmentation      | K-Means Clustering          | Four clusters selected with Silhouette Score ≈ 0.577 |
 | Association Pattern Mining | Apriori / Association Rules | Strong rules included Coffee → Cookies with Lift ≈ 2.83 |
-| Anomaly Detection | Isolation Forest | Recovered all 50 simulated anomalies in the controlled synthetic experiment |
-| Time Series Forecasting | Regression / Forecasting | Linear Regression achieved the best MAE of 7.67 |
+| Anomaly Detection          | Isolation Forest            | Recovered all 50 simulated anomalies in the controlled synthetic experiment |
+| Time Series Forecasting    | Regression / Forecasting    | Linear Regression achieved the best MAE of 7.67 |
 
 The experiments demonstrate a range of data science methods including supervised regression, unsupervised clustering, association rule mining, anomaly detection, and time series forecasting.
 
