@@ -338,91 +338,115 @@ CMPE255-Assignment-1/
 │
 └── Part_2/
     ├── README.md
+    ├── 00_Dynamic_Todo_Workspace.ipynb
     ├── 01_NYC_Taxi_Trip_Prediction.ipynb
-    ├── 02_Customer_Segmentation_Clustering.ipynb
-    ├── 03_Association_Pattern_Mining.ipynb
-    ├── 04_Anomaly_Detection.ipynb
-    └── 05_Time_Series_Forecasting.ipynb
+    ├── 02_NanoLlama_Small_Language_Model.ipynb
+    ├── 03_Customer_Segmentation_Clustering.ipynb
+    ├── 04_Association_Pattern_Mining.ipynb
+    ├── 05_Data_Science_Skills_Mastery_Lab.ipynb
+    ├── 06_Anomaly_Detection.ipynb
+    └── 12_Time_Series_Forecasting.ipynb
+```
 
 ---
 
-# How to Run Part 1
+# Part 1 — Customer Churn Prediction
 
-1. Open `Part_1/CMPE255_Assignment1_Telco_Churn.ipynb` in Google Colab or Jupyter Notebook.
-2. Make sure `WA_Fn-UseC_-Telco-Customer-Churn.csv` is available to the notebook.
-3. Update the dataset path if necessary.
-4. Run all notebook cells from top to bottom.
-5. Review the generated EDA, machine learning results, and conclusions.
+Part 1 is an end-to-end customer churn classification project using the Telco Customer Churn dataset.
 
----
+The project includes:
 
-# AI-Assisted Development
+- Business and data understanding
+- Data quality checking
+- Data cleaning
+- Exploratory data analysis
+- Feature preprocessing
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- Multi-metric model evaluation
+- ROC-AUC analysis
+- Feature interpretation
+- Classification threshold analysis
+- Business recommendations
 
-An AI coding assistant was used throughout the project to assist with:
+Logistic Regression was selected as the final model because it provided a strong balance of performance and better recall and F1 score for the customer retention objective.
 
-- Planning the data science workflow
-- Writing and explaining Python code
-- Debugging notebook issues
-- Designing exploratory analyses
-- Selecting evaluation metrics
-- Interpreting machine learning outputs
-- Comparing models
-- Exploring classification threshold trade-offs
-- Translating technical results into business insights
+Detailed code, outputs, and documentation are available in the [`Part_1`](./Part_1) directory.
 
-The generated outputs were reviewed and interpreted throughout the workflow rather than being treated as results without explanation.
+**Status: Completed**
 
 ---
 
 # Part 2 — Data Science Experiment Replications
 
-Part 2 replicates and adapts selected data science experiments from the instructor's `data_science_examples` repository using an AI-assisted coding workflow.
+Part 2 contains AI-assisted replications and compact adaptations of the instructor's Projects **00–05**.
 
-Rather than reproducing every project exactly, I implemented five representative experiments covering different areas of data science.
+All required Projects 00–05 were completed.
 
-| Experiment                 | Main Technique              | Key Result |
-|---                         |---                          |--- |
-| NYC Taxi Trip Prediction   | Regression                  | Random Forest achieved R² ≈ 0.735 and MAE ≈ 219 seconds |
-| Customer Segmentation      | K-Means Clustering          | Four clusters selected with Silhouette Score ≈ 0.577 |
-| Association Pattern Mining | Apriori / Association Rules | Strong rules included Coffee → Cookies with Lift ≈ 2.83 |
-| Anomaly Detection          | Isolation Forest            | Recovered all 50 simulated anomalies in the controlled synthetic experiment |
-| Time Series Forecasting    | Regression / Forecasting    | Linear Regression achieved the best MAE of 7.67 |
+| Project | Experiment | Main Method / Goal | Status |
+|---|---|---|---|
+| 00 | Dynamic Todo Workspace | Python + Gradio interactive application | Completed |
+| 01 | NYC Taxi Trip Prediction | Regression | Completed |
+| 02 | NanoLlama / Small Language Model | Small language model fine-tuning | Completed |
+| 03 | Customer Segmentation | K-Means clustering | Completed |
+| 04 | Association Pattern Mining | Apriori / association rules | Completed |
+| 05 | Data Science Skills Mastery Lab | Complete machine learning workflow | Completed |
 
-The experiments demonstrate a range of data science methods including supervised regression, unsupervised clustering, association rule mining, anomaly detection, and time series forecasting.
+Two additional experiments were also completed:
 
-Several experiments use synthetic datasets to provide controlled and reproducible demonstrations. These notebooks explicitly identify the use of synthetic data and discuss the limitations of interpreting results from controlled simulations.
+| Project | Experiment | Main Method |
+|---|---|---|
+| 06 | Anomaly Detection | Isolation Forest |
+| 12 | Time Series Forecasting | Regression with time series features |
 
-Detailed methodology, code, outputs, visualizations, evaluation, and interpretation for each experiment are available in the [`Part_2`](./Part_2) directory.
+Detailed code, results, visualizations, limitations, and documentation are available in the [`Part_2`](./Part_2) directory.
 
-**Status:** Completed.
+**Status: Completed**
+
+---
+
+# Selected Part 2 Results
+
+Some of the main results from Part 2 include:
+
+- **NYC Taxi Prediction:** Random Forest achieved R² ≈ 0.735 and MAE ≈ 219 seconds.
+- **NanoLlama:** Training loss decreased from approximately 10.83 to 10.71, but generated text remained poor, demonstrating that lower training loss does not automatically mean useful text generation.
+- **Customer Segmentation:** Four clusters were selected with a Silhouette Score of approximately 0.577.
+- **Association Mining:** Coffee → Cookies produced a lift of approximately 2.83.
+- **Data Science Skills Lab:** Logistic Regression achieved approximately 98.25% test accuracy and 98.02% mean cross-validation accuracy.
+- **Anomaly Detection:** Isolation Forest recovered all 50 intentionally created anomalies in the controlled synthetic experiment.
+- **Time Series Forecasting:** Linear Regression achieved the best MAE of 7.67.
+
+---
+
+# AI-Assisted Development
+
+ChatGPT was used throughout the assignment to assist with:
+
+- Planning data science workflows
+- Writing and understanding Python code
+- Debugging notebook issues
+- Designing exploratory analyses
+- Comparing models
+- Selecting evaluation methods
+- Interpreting results
+- Identifying limitations
+- Organizing project documentation
+
+Generated outputs were reviewed and tested throughout the workflow.
+
+An important lesson from the assignment was that AI-generated code and conclusions still require human review.
+
+For example, the NanoLlama experiment showed decreasing training loss but poor generated text. This required evaluating the actual model output rather than assuming that a lower loss meant the model was useful.
 
 ---
 
 # Medium Article
 
-I published a detailed article describing the complete end-to-end workflow, including data cleaning, exploratory data analysis, machine learning model comparison, model interpretation, threshold analysis, and business insights.
+A Medium article was published for Part 1 describing the complete customer churn workflow, including data cleaning, exploratory analysis, machine learning, model interpretation, threshold analysis, and business insights.
 
-[Read the full Medium article: Predicting Customer Churn with AI-Assisted Data Science](https://medium.com/@yhz1805/predicting-customer-churn-with-ai-assisted-data-science-an-end-to-end-machine-learning-project-38d42dc91b9d)
-
----
-
-# YouTube Walkthrough
-
-A final video walkthrough will cover both Part 1 and Part 2 of the assignment.
-
-The walkthrough includes:
-
-- Part 1 customer churn workflow and major findings
-- Model comparison and threshold analysis
-- Part 2 experiment overview
-- NYC Taxi Trip Prediction
-- Customer Segmentation
-- Association Pattern Mining
-- Anomaly Detection
-- Time Series Forecasting
-- Key lessons from the AI-assisted data science workflow
-
-**YouTube Video:** Coming soon
+The article link is included in this repository.
 
 ---
 
@@ -430,21 +454,62 @@ The walkthrough includes:
 
 The AI-assisted development transcript for Part 1 is included in the `Part_1` directory.
 
-The transcript documents the iterative workflow used to plan, implement, debug, evaluate, and interpret the customer churn data science project.
+The transcript documents the iterative process used to plan, implement, debug, evaluate, and interpret the customer churn project.
 
-**Status:** Completed.
+**Status: Completed**
 
 ---
 
-## Final Deliverables
+# YouTube Walkthrough
+
+A final YouTube walkthrough will cover both Part 1 and Part 2.
+
+The video will include:
+
+- Repository overview
+- Part 1 customer churn workflow
+- Part 1 model results and business findings
+- Part 2 required Projects 00–05
+- Additional experiments
+- Main lessons from the AI-assisted workflow
+
+**YouTube Video: Coming soon**
+
+---
+
+# Final Deliverables
 
 - [x] Part 1 end-to-end data science notebook
-- [x] Dataset
+- [x] Part 1 dataset
 - [x] Exploratory data analysis
 - [x] Machine learning model comparison
 - [x] Model interpretation
 - [x] Classification threshold experiment
 - [x] Medium article
 - [x] Chat transcript
-- [x] Part 2 experiments
+- [x] Part 2 Project 00
+- [x] Part 2 Project 01
+- [x] Part 2 Project 02
+- [x] Part 2 Project 03
+- [x] Part 2 Project 04
+- [x] Part 2 Project 05
+- [x] Additional Experiment 06
+- [x] Additional Experiment 12
+- [x] Part 2 documentation
 - [ ] YouTube walkthrough
+
+---
+
+# Assignment Status
+
+**Part 1: Completed**
+
+**Part 2 Required Projects 00–05: Completed**
+
+**Additional Experiments: Completed**
+
+**Medium Article: Published**
+
+**Chat Transcript: Completed**
+
+**YouTube Walkthrough: Pending**
