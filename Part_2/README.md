@@ -1,195 +1,356 @@
-# Part 2 — Data Science Experiment Replications
+# CMPE 255 Assignment 1 — Part 2
 
-This directory contains Part 2 of my CMPE 255 Assignment 1.
+## Data Science Experiment Replications
 
-The goal of Part 2 is to replicate and adapt data science experiments from the instructor's `data_science_examples` repository using an AI-assisted coding workflow.
+Part 2 contains my AI-assisted replications and adaptations of Projects **00–05** from the instructor's `data_science_examples` repository.
 
-Rather than reproducing every experiment exactly, I selected and implemented five experiments covering different areas of data science and machine learning.
+The original projects include larger applications, user interfaces, training workflows, and data science demonstrations. For this assignment, I used the instructor prompts as the main goals and created smaller, reproducible versions that can run in Google Colab.
 
-## Experiments
-
-### 1. NYC Taxi Trip Duration Prediction
-
-**Notebook:** `01_NYC_Taxi_Trip_Prediction.ipynb`
-
-This experiment applies supervised regression to predict NYC taxi trip duration.
-
-The workflow includes:
-
-- Data exploration and cleaning
-- Geographic distance feature engineering
-- Time-based feature engineering
-- Baseline prediction
-- Linear Regression
-- Random Forest Regression
-- Model comparison
-- Feature importance analysis
-- Prediction demonstration
-
-The Random Forest model achieved the best performance:
-
-- MAE: approximately 219 seconds
-- RMSE: approximately 334 seconds
-- R²: approximately 0.735
-
-Straight-line trip distance was the most important predictive feature.
+The goal was not to copy every project exactly, but to reproduce and understand the main idea of each project.
 
 ---
 
-### 2. Customer Segmentation with K-Means
+# Required Projects 00–05
 
-**Notebook:** `02_Customer_Segmentation_Clustering.ipynb`
+| Project | Experiment | Main Goal | Status |
+|---|---|---|---|
+| 00 | Dynamic Todo Workspace | Build an interactive task management application | Completed |
+| 01 | NYC Taxi Trip Prediction | Predict taxi trip duration using regression | Completed |
+| 02 | NanoLlama / Small Language Model | Demonstrate a small language model fine-tuning workflow | Completed |
+| 03 | Customer Segmentation | Discover customer groups using clustering | Completed |
+| 04 | Association Pattern Mining | Discover relationships between items in transaction data | Completed |
+| 05 | Data Science Skills Mastery Lab | Demonstrate multiple data science skills in one workflow | Completed |
 
-This experiment demonstrates unsupervised customer segmentation using synthetic customer behavioral data.
+All required Projects **00–05 are completed**.
 
-The workflow includes:
+---
 
-- Customer data exploration
-- Feature standardization
+# Project 00 — Dynamic Todo Workspace
+
+**Notebook:** [`00_Dynamic_Todo_Workspace.ipynb`](./00_Dynamic_Todo_Workspace.ipynb)
+
+This project implements a compact interactive Todo application using Python and Gradio.
+
+### Main Features
+
+- Add new tasks
+- View current tasks
+- Mark tasks as completed
+- Delete tasks
+- Display task status
+- Interactive web interface
+
+The application was tested through the Gradio interface to verify that the main user actions work correctly.
+
+This is a lightweight adaptation of the original full application concept. Tasks are stored in memory rather than in a permanent database.
+
+---
+
+# Project 01 — NYC Taxi Trip Prediction
+
+**Notebook:** [`01_NYC_Taxi_Trip_Prediction.ipynb`](./01_NYC_Taxi_Trip_Prediction.ipynb)
+
+This experiment predicts NYC taxi trip duration using regression models.
+
+### Main Steps
+
+- Data understanding
+- Data cleaning
+- Time feature engineering
+- Geographic distance calculation
+- Baseline prediction
+- Linear Regression
+- Random Forest
+- Model comparison
+- Feature importance
+- Trip duration prediction demo
+
+### Main Results
+
+| Model | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| Baseline | 458.86 sec | 650.25 sec | — |
+| Linear Regression | 280.58 sec | 406.37 sec | 0.609 |
+| Random Forest | **218.93 sec** | **334.48 sec** | **0.735** |
+
+Random Forest produced the best performance.
+
+Geographic trip distance was the most important feature.
+
+---
+
+# Project 02 — NanoLlama / Small Language Model
+
+**Notebook:** [`02_NanoLlama_Small_Language_Model.ipynb`](./02_NanoLlama_Small_Language_Model.ipynb)
+
+This project demonstrates a compact language model fine-tuning workflow.
+
+A very small GPT-style pretrained model was used so that the experiment could run quickly in Google Colab.
+
+### Main Steps
+
+- Create instruction-response training data
+- Format text conversations
+- Tokenize text
+- Load a small pretrained language model
+- Test before fine-tuning
+- Fine-tune for 20 epochs
+- Track training loss
+- Test after fine-tuning
+- Inspect generated text
+- Create a simple text generation function
+
+### Main Result
+
+Training loss decreased from approximately:
+
+**10.83 → 10.71**
+
+However, the generated text did not become useful.
+
+Before fine-tuning, the model repeatedly generated the word `stairs`.
+
+After fine-tuning, the model mainly repeated the word `the`.
+
+This experiment demonstrates an important lesson:
+
+> Lower training loss does not automatically mean better text generation quality.
+
+The result also shows the limitations of using an extremely small model and only 12 training examples.
+
+---
+
+# Project 03 — Customer Segmentation
+
+**Notebook:** [`03_Customer_Segmentation_Clustering.ipynb`](./03_Customer_Segmentation_Clustering.ipynb)
+
+This experiment uses K-Means clustering to discover customer groups from synthetic customer behavior data.
+
+### Main Skills
+
+- Data exploration
+- Feature scaling
 - Elbow Method
-- Silhouette Score analysis
+- Silhouette Score
 - K-Means clustering
 - PCA visualization
 - Cluster profiling
 - Business interpretation
 
-Both the Elbow Method and Silhouette Score supported selecting four customer clusters.
+### Main Result
 
-The final four segments were interpreted as:
+The best clustering solution used:
+
+**K = 4**
+
+with a Silhouette Score of approximately:
+
+**0.577**
+
+The four customer groups were interpreted as:
 
 1. Premium High-Value Customers
 2. Conservative Affluent Customers
 3. Budget / Low-Engagement Customers
 4. Frequent Value Shoppers
 
-The four-cluster solution achieved a Silhouette Score of approximately 0.577.
+PCA was used for visualization only. The clustering model used the full standardized feature set.
 
 ---
 
-### 3. Association Pattern Mining
+# Project 04 — Association Pattern Mining
 
-**Notebook:** `03_Association_Pattern_Mining.ipynb`
+**Notebook:** [`04_Association_Pattern_Mining.ipynb`](./04_Association_Pattern_Mining.ipynb)
 
-This experiment demonstrates market basket analysis using the Apriori algorithm.
+This experiment uses the Apriori algorithm and association rules to discover product relationships in synthetic retail transactions.
 
-The workflow includes:
+### Main Skills
 
-- Synthetic retail transaction generation
-- Transaction encoding
-- Frequent itemset mining
-- Association rule generation
-- Support analysis
-- Confidence analysis
-- Lift analysis
-- Business interpretation
+- Transaction data preparation
+- Market basket encoding
+- Apriori frequent itemset mining
+- Support
+- Confidence
+- Lift
+- Association rule interpretation
 
-Some of the strongest discovered relationships included:
+### Example Results
 
-- Coffee → Cookies: Lift ≈ 2.83
-- Chips → Soda: Lift ≈ 2.75
-- Pasta → Tomato Sauce: Lift ≈ 2.59
-- Bread → Milk: Lift ≈ 2.10
+| Rule | Lift |
+|---|---:|
+| Coffee → Cookies | 2.83 |
+| Chips → Soda | 2.75 |
+| Pasta → Tomato Sauce | 2.59 |
+| Bread → Milk | 2.10 |
 
-These patterns demonstrate how association mining can support cross-selling, product bundling, and recommendation strategies.
+Bread and Milk appeared together in approximately **30.7%** of transactions.
+
+These patterns could support product recommendations, bundling, promotions, and store planning.
+
+Association does not imply causation.
 
 ---
 
-### 4. Anomaly Detection with Isolation Forest
+# Project 05 — Data Science Skills Mastery Lab
 
-**Notebook:** `04_Anomaly_Detection.ipynb`
+**Notebook:** [`05_Data_Science_Skills_Mastery_Lab.ipynb`](./05_Data_Science_Skills_Mastery_Lab.ipynb)
 
-This experiment demonstrates unsupervised anomaly detection using synthetic financial transaction data.
+This experiment combines multiple common data science skills into one complete workflow using the Breast Cancer Wisconsin dataset.
 
-The workflow includes:
+The project is an educational demonstration and is not intended for real medical use.
 
-- Transaction data generation
+### Skills Demonstrated
+
+- Data loading
+- Data quality checking
 - Exploratory analysis
-- Feature standardization
-- Isolation Forest
-- Anomaly scoring
-- Anomaly visualization
-- Evaluation against known simulated anomalies
-- Business interpretation
+- Feature scaling
+- Train/test splitting
+- Machine learning pipelines
+- Logistic Regression
+- K-Nearest Neighbors
+- Random Forest
+- Cross-validation
+- Model comparison
+- Confusion matrix analysis
+- Feature importance
+- PCA visualization
 
-The dataset contained 1,000 transactions, including 50 intentionally simulated anomalies.
+### Model Results
 
-Isolation Forest recovered all 50 simulated anomalies in the controlled experiment.
+| Model | Test Accuracy | F1 Score | Mean CV Accuracy |
+|---|---:|---:|---:|
+| Logistic Regression | **0.9825** | **0.9861** | **0.9802** |
+| KNN | 0.9561 | 0.9655 | 0.9670 |
+| Random Forest | 0.9561 | 0.9655 | 0.9604 |
 
-The perfect result reflects the deliberately well-separated synthetic data and known anomaly proportion and should not be interpreted as expected real-world fraud detection performance.
+Logistic Regression produced the best result.
+
+Its confusion matrix was:
+
+```text
+[[41, 1],
+ [ 1, 71]]
+```
+
+This means it correctly classified **112 of 114 test samples**.
+
+Random Forest feature importance and PCA were also used to explore and interpret the data.
 
 ---
 
-### 5. Time Series Forecasting
+# Additional Experiments
 
-**Notebook:** `05_Time_Series_Forecasting.ipynb`
+In addition to the required Projects 00–05, I completed two additional experiments.
 
-This experiment demonstrates daily sales forecasting using chronological model evaluation.
+## Project 06 — Anomaly Detection
+
+**Notebook:** [`06_Anomaly_Detection.ipynb`](./06_Anomaly_Detection.ipynb)
+
+This experiment uses Isolation Forest to identify unusual financial transactions.
+
+The dataset contains 1,000 synthetic transactions, including 50 intentionally created anomalies.
+
+Isolation Forest recovered all 50 simulated anomalies in this controlled experiment.
+
+The perfect result should not be interpreted as real-world fraud detection performance because the synthetic anomalies were intentionally well separated from normal transactions.
+
+---
+
+## Project 12 — Time Series Forecasting
+
+**Notebook:** [`12_Time_Series_Forecasting.ipynb`](./12_Time_Series_Forecasting.ipynb)
+
+This experiment predicts daily sales using time series features.
 
 The workflow includes:
 
-- Time series exploration
-- Trend and seasonality analysis
-- Lag feature engineering
 - Chronological train/test splitting
-- Naive baseline forecasting
+- Lag features
+- Naive baseline
 - Linear Regression
-- Random Forest Regression
-- Model comparison
-- Feature importance
-- Recursive 30-day forecasting
+- Random Forest
+- Forecast evaluation
+- Future forecasting
 
-Model performance:
+### Main Results
 
 | Model | MAE | RMSE |
 |---|---:|---:|
 | Naive Baseline | 13.07 | 15.86 |
-| Linear Regression | 7.67 | 9.66 |
+| Linear Regression | **7.67** | **9.66** |
 | Random Forest | 8.34 | 10.32 |
 
-Linear Regression achieved the best test performance.
+Linear Regression produced the best result.
 
-The Random Forest feature importance analysis also showed that 7-day and 14-day lag features were particularly informative, which is consistent with the weekly seasonal pattern in the synthetic time series.
+The experiment also showed that 7-day and 14-day lag features were especially useful for predicting daily sales.
 
 ---
 
-## Methods Covered
+# AI-Assisted Workflow
 
-Across the five experiments, Part 2 demonstrates several different data science techniques:
+ChatGPT was used throughout Part 2 to help with:
 
-| Experiment | Main Technique |
-|---|---|
-| NYC Taxi Trip Prediction | Supervised Regression |
-| Customer Segmentation | Unsupervised Clustering |
-| Association Pattern Mining | Apriori / Association Rules |
-| Anomaly Detection | Isolation Forest |
-| Time Series Forecasting | Forecasting / Regression |
+- Understanding the instructor project goals
+- Planning smaller reproducible experiments
+- Writing and explaining Python code
+- Debugging problems
+- Designing evaluation methods
+- Interpreting outputs
+- Identifying limitations
+- Organizing notebook documentation
 
-Together with the customer churn classification project in Part 1, the assignment covers classification, regression, clustering, association mining, anomaly detection, and time series forecasting.
+Generated code and conclusions were tested and reviewed during the workflow.
 
-## AI-Assisted Workflow
+AI output was not treated as automatically correct.
 
-AI assistance was used throughout the experiments to support:
+---
 
-- Experiment planning
-- Code generation
-- Debugging
-- Feature engineering
-- Model selection
-- Result interpretation
-- Visualization
-- Business insight development
-- Documentation
+# How to Run
 
-The generated code was executed and evaluated in Google Colab, and the experimental results were reviewed and interpreted before being included in the final notebooks.
+The notebooks were developed in Google Colab.
 
-## Notes on Synthetic Data
+To reproduce an experiment:
 
-Several experiments use synthetic datasets to create controlled and reproducible demonstrations.
+1. Open the selected `.ipynb` notebook in Google Colab or Jupyter Notebook.
+2. Run the cells from top to bottom.
+3. Install any requested package when required.
+4. Review the saved outputs, visualizations, evaluation results, and conclusions.
 
-The notebooks explicitly identify where synthetic data is used. Results from these experiments are intended to demonstrate data science methodology and should not be interpreted as evidence about real customers, transactions, or business behavior.
+Some experiments use synthetic data so that they can be reproduced without downloading external datasets.
 
-## YouTube Walkthrough
+---
 
-A video walkthrough covering both Part 1 and Part 2 will be added here after recording.
+# Limitations
+
+These projects are compact educational adaptations.
+
+They do not reproduce every feature of the original full applications.
+
+Important limitations include:
+
+- Some experiments use synthetic data.
+- The Todo application uses in-memory storage.
+- The language model is extremely small and does not produce useful chatbot responses.
+- The experiments do not include production deployment.
+- The projects focus on demonstrating the main workflow and learning goals.
+
+These limitations are discussed directly in the individual notebooks.
+
+---
+
+# YouTube Walkthrough
+
+A video walkthrough of Part 1 and Part 2 will be linked here after recording.
 
 **YouTube Video:** Coming soon
+
+---
+
+# Status
+
+**Required Projects 00–05: Completed**
+
+**Additional Experiments 06 and 12: Completed**
+
+**Part 2: Completed**
