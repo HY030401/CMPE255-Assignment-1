@@ -333,11 +333,16 @@ CMPE255-Assignment-1/
 ├── Part_1/
 │   ├── README.md
 │   ├── CMPE255_Assignment1_Telco_Churn.ipynb
+│   ├── CMPE255_Assignment1_Part1_ChatGPT_Transcript.pdf
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 │
 └── Part_2/
-    └── To be completed
-```
+    ├── README.md
+    ├── 01_NYC_Taxi_Trip_Prediction.ipynb
+    ├── 02_Customer_Segmentation_Clustering.ipynb
+    ├── 03_Association_Pattern_Mining.ipynb
+    ├── 04_Anomaly_Detection.ipynb
+    └── 05_Time_Series_Forecasting.ipynb
 
 ---
 
@@ -369,11 +374,27 @@ The generated outputs were reviewed and interpreted throughout the workflow rath
 
 ---
 
-# Part 2 — Data Science Experiments
+# Part 2 — Data Science Experiment Replications
 
-Part 2 will replicate and explore the data science experiments provided in the course repository using an AI coding assistant.
+Part 2 replicates and adapts selected data science experiments from the instructor's `data_science_examples` repository using an AI-assisted coding workflow.
 
-**Status:** To be completed.
+Rather than reproducing every project exactly, I implemented five representative experiments covering different areas of data science.
+
+| Experiment | Main Technique | Key Result |
+|---|---|---|
+| NYC Taxi Trip Prediction | Regression | Random Forest achieved R² ≈ 0.735 and MAE ≈ 219 seconds |
+| Customer Segmentation | K-Means Clustering | Four clusters selected with Silhouette Score ≈ 0.577 |
+| Association Pattern Mining | Apriori / Association Rules | Strong rules included Coffee → Cookies with Lift ≈ 2.83 |
+| Anomaly Detection | Isolation Forest | Recovered all 50 simulated anomalies in the controlled synthetic experiment |
+| Time Series Forecasting | Regression / Forecasting | Linear Regression achieved the best MAE of 7.67 |
+
+The experiments demonstrate a range of data science methods including supervised regression, unsupervised clustering, association rule mining, anomaly detection, and time series forecasting.
+
+Several experiments use synthetic datasets to provide controlled and reproducible demonstrations. These notebooks explicitly identify the use of synthetic data and discuss the limitations of interpreting results from controlled simulations.
+
+Detailed methodology, code, outputs, visualizations, evaluation, and interpretation for each experiment are available in the [`Part_2`](./Part_2) directory.
+
+**Status:** Completed.
 
 ---
 
@@ -387,17 +408,31 @@ I published a detailed article describing the complete end-to-end workflow, incl
 
 # YouTube Walkthrough
 
-A video walkthrough explaining the end-to-end workflow, outputs, interpretations, and lessons learned will be added here.
+A final video walkthrough will cover both Part 1 and Part 2 of the assignment.
 
-**Link:** To be added
+The walkthrough includes:
+
+- Part 1 customer churn workflow and major findings
+- Model comparison and threshold analysis
+- Part 2 experiment overview
+- NYC Taxi Trip Prediction
+- Customer Segmentation
+- Association Pattern Mining
+- Anomaly Detection
+- Time Series Forecasting
+- Key lessons from the AI-assisted data science workflow
+
+**YouTube Video:** Coming soon
 
 ---
 
 # Chat Transcript
 
-The AI-assisted development transcript used during Part 1 will be included in the repository.
+The AI-assisted development transcript for Part 1 is included in the `Part_1` directory.
 
-**Status:** Added to the Part 1 folder.
+The transcript documents the iterative workflow used to plan, implement, debug, evaluate, and interpret the customer churn data science project.
+
+**Status:** Completed.
 
 ---
 
@@ -411,5 +446,5 @@ The AI-assisted development transcript used during Part 1 will be included in th
 - [x] Classification threshold experiment
 - [x] Medium article
 - [x] Chat transcript
+- [x] Part 2 experiments
 - [ ] YouTube walkthrough
-- [ ] Part 2 experiments
