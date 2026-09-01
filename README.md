@@ -446,7 +446,7 @@ For example, the NanoLlama experiment showed decreasing training loss but poor g
 
 A Medium article was published for Part 1 describing the complete customer churn workflow, including data cleaning, exploratory analysis, machine learning, model interpretation, threshold analysis, and business insights.
 
-The article link is included in this repository.
+[`Predicting Customer Churn with AI-Assisted Data Science: An End-to-End Machine Learning Project`](medium.com/@yhz1805/predicting-customer-churn-with-ai-assisted-data-science-an-end-to-end-machine-learning-project-38d42dc91b9d)
 
 ---
 
