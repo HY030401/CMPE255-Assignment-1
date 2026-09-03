@@ -473,7 +473,7 @@ The video will include:
 - Additional experiments
 - Main lessons from the AI-assisted workflow
 
-**YouTube Video: Coming soon**
+[**Watch the CMPE 255 Assignment 1 Walkthrough on YouTube**](https://www.youtube.com/watch?v=_sqO-ba8oYQ)
 
 ---
 
@@ -496,7 +496,7 @@ The video will include:
 - [x] Additional Experiment 06
 - [x] Additional Experiment 12
 - [x] Part 2 documentation
-- [ ] YouTube walkthrough
+- [x] YouTube walkthrough
 
 ---
 
