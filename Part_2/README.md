@@ -343,7 +343,7 @@ These limitations are discussed directly in the individual notebooks.
 
 A video walkthrough of Part 1 and Part 2 will be linked here after recording.
 
-**YouTube Video:** Coming soon
+**[Watch the Assignment 1 Walkthrough on YouTube](https://www.youtube.com/watch?v=_sqO-ba8oYQ)**
 
 ---
 
